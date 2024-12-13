@@ -1,0 +1,13 @@
+ubioworo:
+  outputs:
+    dev:
+      account: xz72850.switzerland-north.azure
+      database: snowflake_dbt
+      password: Comfort12345@
+      role: my_snowflake_role
+      schema: snowflake_mart_schema
+      threads: 6
+      type: snowflake
+      user: ubio
+      warehouse: my_snowflake_dbt_warehouse
+  target: dev
