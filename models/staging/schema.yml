@@ -1,0 +1,49 @@
+version: 2
+
+models:
+  - name: st_category
+    description: "This is the test for the column to check for null values."
+    columns:
+      - name: categorykey
+        tests:
+          - not_null
+          - relationships:
+              to: ref('other_table_with_category')  # Replace with the actual reference table
+              field: categorykey
+
+  - name: st_subcategory
+    description: "This is the table for subcategory test."
+    columns:
+      - name: subcategorykey
+        tests:
+          - not_null
+          - relationships:
+              to: ref('other_table_with_subcategory')  # Replace with the actual reference table
+              field: subcategorykey
+
+  - name: st_customertable
+    description: "This test is for the customer table."
+    columns:
+      - name: customerkey
+        tests:
+          - not_null
+
+  - name: st_storetable
+    description: "This test is for the store table."
+    columns:
+      - name: storekey
+        tests:
+          - not_null
+
+  - name: st_productstable
+    description: "This test is for the product table."
+    columns:
+      - name: productkey
+        tests:
+          - not_null
+      - name: UNITCOSTUSD
+        tests:
+          - not_null
+      - name: UNITPRICEUSD
+        tests:
+          - not_null

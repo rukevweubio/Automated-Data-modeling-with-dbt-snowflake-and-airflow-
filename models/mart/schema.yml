@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: mart_customer_orders
+    description: "This is the mart table to check for the mart_customer_table."
+    columns:
+      - name: PRODUCTKEY
+        tests:
+          - not_null
+         
+          - relationships:
+              to: ref('mart_products_orders')  
+              field: [CUSTOMERKEY, STOREKEY, SUBCATEGORYKEY]
+      - name: totalcost
+        tests:
+          - not_null
+          - custom:
+            
+              sql: "SELECT * FROM {{ ref('mart_products_orders') }} WHERE totalcost >=0"
+              description: "Ensure totalcost is greater than 0"
+
+
+
+
+

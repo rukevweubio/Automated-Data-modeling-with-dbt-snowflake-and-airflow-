@@ -1,0 +1,32 @@
+version: 2
+
+sources:
+  - name: my_snowflake_database
+    database: snowflake_dbt            # Replace with your Snowflake database name
+    schema: snowflake_mart_schema     # Replace with your schema name
+    tables:
+      - name: customer                # Replace with your table name
+        description: "This is the table for the customer orders."
+      - name: orders
+        description: "This is the table for the orders of the customer."
+      - name: products
+        description: "This is the table for the products of the customer."
+      - name: sales
+        description: "This is the table for sales."
+      - name: store
+        description: "This is the table for stores."
+
+  - name: my_snowflake_database_schema
+    database: snowflake_dbt           # Replace with your Snowflake database name
+    schema: snowflake_dbt_schema         # Replace with your schema name
+    tables:
+      - name: customer                # Replace with your table name
+        description: "This is the table for the customer orders."
+      - name: orders
+        description: "This is the table for the orders of the customer."
+      - name: products
+        description: "This is the table for the products of the customer."
+      - name: sales
+        description: "This is the table for sales."
+      - name: store
+        description: "This is the table for stores."

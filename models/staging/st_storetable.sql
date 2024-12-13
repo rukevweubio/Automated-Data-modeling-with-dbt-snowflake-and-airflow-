@@ -1,0 +1,9 @@
+{{config(materialized='table')}}
+select  
+    STOREKEY,
+    COUNTRY,
+    STATE,
+    SQUAREMETERS,
+    OPENDATE,
+from 
+     {{ref('store')}}
