@@ -25,9 +25,39 @@ Through this automated and integrated approach, the project aims to provide a re
 - GitHub: Repository for project versioning and documentation.
 - Development Tools:VSCode: IDE for coding and debugging.
 ####  How to Set Up the Tech Stack
-- set up snowflake datawarehouse: Snowflake serves as the data warehouse for storing and querying large datasets.
-Sign up at Snowflake website: [Snowflake](https://www.snowflake.com/en/data-cloud/platform/)  to create your database, schema nad table
-- install dbt-snowflake by following the dbt documentation how how to install [Snowflake and dbt Documentation](https://www.bing.com/videos/riverview/relatedvideo?q=dbtsnowflake+documentation&mid=C459CCA0EAEE9730F82DC459CCA0EAEE9730F82D&FORM=VIRE
+- Set Up Snowflake as Your Data Warehouse
+To begin, we will use Snowflake as the data warehouse for storing and analyzing large datasets. Follow these steps to create an account and set up the necessary structures within Snowflake:
+Go to the Snowflake website: [Snowflake](https://www.snowflake.com/en/data-cloud/platform/)  Sign up for a Snowflake account by filling in the required details. After signing up, you will be directed to the Snowflake console
+
+- Setting Up dbt for Snowflake Integration
+To set up dbt with Snowflake, follow the steps below. This guide includes downloading and installing dbt, configuring it for Snowflake, and creating the necessary files for connection
+ [Snowflake and dbt Documentation](https://www.bing.com/videos/riverview/relatedvideo?q=dbtsnowflake+documentation&mid=C459CCA0EAEE9730F82DC459CCA0EAEE9730F82D&FORM=VIRE
+
+```
+python --version,
+pip install dbt-snowflake,
+
+
+your_project_name: 
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: <your_snowflake_account>  
+      user: <your_snowflake_user>   
+      password: <your_snowflake_password> 
+      role: <your_snowflake_role>      
+      database: <your_snowflake_database> 
+      warehouse: <your_snowflake_warehouse> 
+      schema: <your_snowflake_schema>   
+      threads: 1  
+      client_session_keep_alive: False
+
+dbt init your_project_name
+dbt run
+
+ 
+```
 - install airflow(astro dev cli) for airflow orchestration [Install Astronomer Airflow (Astro)](https://www.bing.com/videos/riverview/relatedvideo?q=dbtsnowflake+documentation&mid=C459CCA0EAEE9730F82DC459CCA0EAEE9730F82D&FORM=VIRE
 
 #### Data Sources Overview
@@ -41,7 +71,14 @@ This project leverages several data sources that provide critical information fo
 - Source: CSV file
 - Format: CSV
 
-
+`python --version
+`
+#### Data Flow Overview
+the data flow describes how raw data moves from its source into the Snowflake data warehouse and is processed through various stages to become ready for analysis. Here's a high-level breakdown of the data flow.
+- Data Ingestion (Raw Data Loading): The data originates from CSV files (Customer, Orders, Product Sales, Store) that are loaded into Snowflake as the raw input file
+- Data is ingested into Snowflake via staging tables.
+- The raw data is initially stored in Snowflake's stage and a copy command is used to load the data into the raws schema.
+- pipe are create that also help in loading the data  for automation.
 
 
 
