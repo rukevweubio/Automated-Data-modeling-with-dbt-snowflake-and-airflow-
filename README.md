@@ -24,4 +24,25 @@ Through this automated and integrated approach, the project aims to provide a re
 - Version Control:Git: For source code management and collaboration.
 - GitHub: Repository for project versioning and documentation.
 - Development Tools:VSCode: IDE for coding and debugging.
+####  How to Set Up the Tech Stack
+- set up snowflake datawarehouse: Snowflake serves as the data warehouse for storing and querying large datasets.
+Sign up at Snowflake website: [Snowflake](https://www.snowflake.com/en/data-cloud/platform/)  to create your database, schema nad table
+- install dbt-snowflake by following the dbt documentation how how to install [Snowflake and dbt Documentation](https://www.bing.com/videos/riverview/relatedvideo?q=dbtsnowflake+documentation&mid=C459CCA0EAEE9730F82DC459CCA0EAEE9730F82D&FORM=VIRE
+- install airflow(astro dev cli) for airflow orchestration [Install Astronomer Airflow (Astro)](https://www.bing.com/videos/riverview/relatedvideo?q=dbtsnowflake+documentation&mid=C459CCA0EAEE9730F82DC459CCA0EAEE9730F82D&FORM=VIRE
+
+#### Data Sources Overview
+This project leverages several data sources that provide critical information for the analysis and transformation processes. The primary data sources are CSV files that are loaded into the staging area of the snowflake. Here’s an overview of the data sources used:
+-  Customer Data
+-  product Data
+-  orders Data
+-  sales Data
+-  store data
+- Type of Data: Structured
+- Source: CSV file
+- Format: CSV
+
+
+
+
+
 
