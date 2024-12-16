@@ -79,6 +79,7 @@ the data flow describes how raw data moves from its source into the Snowflake da
 - Data is ingested into Snowflake via staging tables.
 - The raw data is initially stored in Snowflake's stage and a copy command is used to load the data into the raws schema.
 - pipe are create that also help in loading the data  for automation.
+![Project Diagram](https://github.com/username/repository_name/blob/main/images/project_diagram.png)
 
 
 
