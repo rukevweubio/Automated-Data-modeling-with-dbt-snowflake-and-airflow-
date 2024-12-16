@@ -85,6 +85,9 @@ the data flow describes how raw data moves from its source into the Snowflake da
 ### Data flow Daigram
 ![Data flow daigram](https://github.com/rukevweubio/Data-engineering-project-with-snowflake-dbt-and-airflow/blob/main/data%20architecture%20design.jpg)
 
+### airflow dag daigram
+![airflow dag](https://github.com/rukevweubio/Data-engineering-project-with-snowflake-dbt-and-airflow/blob/main/Screenshot%20(300).png)
+
 
 
 
