@@ -79,7 +79,11 @@ the data flow describes how raw data moves from its source into the Snowflake da
 - Data is ingested into Snowflake via staging tables.
 - The raw data is initially stored in Snowflake's stage and a copy command is used to load the data into the raws schema.
 - pipe are create that also help in loading the data  for automation.
+  
 ![Project Diagram](https://github.com/rukevweubio/Data-engineering-project-with-snowflake-dbt-and-airflow/blob/main/Data%20modeling.jpg)
+
+### Data flow Daigram
+![Data flow daigram](https://github.com/rukevweubio/Data-engineering-project-with-snowflake-dbt-and-airflow/blob/main/data%20architecture%20design.jpg)
 
 
 
